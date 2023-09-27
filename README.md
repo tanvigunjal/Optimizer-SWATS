@@ -1,9 +1,9 @@
 # Optimizer-SWATS
 
-SWATS-Optimizer: Switching from Adam to SGD [1]
+SWATS-Optimizer: Switching from Adam to SGD. [[1]](#1)
 
 # Overview
-Adaptive optimization methods like RMSprop, Adagrad or Adam generalizes poorly despite their superior training performance when compared to Stochastic gradient descent (SGD). Adaptive optimization methods perform well in the initial training stage but lack in performance in later stages due to unstable and non-uniform learning rate at the end of training. Hence, SGD generalizes better when compared to adaptive methods.
+Adaptive optimization methods like RMSprop, Adagrad or Adam [[2]](#2) generalizes poorly despite their superior training performance when compared to Stochastic gradient descent (SGD)[[3]](#3). Adaptive optimization methods perform well in the initial training stage but lack in performance in later stages due to unstable and non-uniform learning rate at the end of training. Hence, SGD generalizes better when compared to adaptive methods.
 
 # Experiment
 To perform analysis we used ResNet-34 and DenseNet architectures on <a href = "https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 </a> dataset. Dataset has 60000 images, which is divided into train set (40000 images), validation set (10000 images) and test set(10000 images). We then compared the results for three optimizers: Adam, SGD and SWATS, with learning rate 0.001 and threshold 1e-5.
